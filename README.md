@@ -51,7 +51,3 @@ src/test/resources
 ├── config.properties
 
 
-
----
-
-**Author:** Arun Kumar
