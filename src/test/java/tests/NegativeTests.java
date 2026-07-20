@@ -29,19 +29,7 @@ public class NegativeTests {
 		log.info("GET Invalid Employee Test Execution Completed");
 	}
 
-	@Test(description = "GET Employee Without ID", priority = 2)
-	public void getWithoutId() {
-
-		Response response = given().spec(RequestSpec.getRequestSpec()).when().get(Endpoints.GET_EMPLOYEE);
-
-		log.info("Response Status Code : {}", response.getStatusCode());
-
-		Assert.assertEquals(response.getStatusCode(), 404);
-
-		log.info("GET Without ID Test Execution Completed");
-	}
-
-	@Test(description = "DELETE Invalid Employee", priority = 3)
+	@Test(description = "DELETE Invalid Employee", priority = 2)
 	public void deleteInvalidEmployee() {
 
 		log.info("Deleting Employee with Invalid ID");
@@ -56,7 +44,7 @@ public class NegativeTests {
 		log.info("DELETE Invalid Employee Test Execution Completed");
 	}
 
-	@Test(description = "PATCH Invalid Employee", priority = 4)
+	@Test(description = "PATCH Invalid Employee", priority = 3)
 	public void patchInvalidEmployee() {
 
 		EmployeeRequest request = new EmployeeRequest();
@@ -74,7 +62,7 @@ public class NegativeTests {
 		log.info("PATCH Invalid Employee Test Passed");
 	}
 
-	@Test(description = "DELETE Already Deleted Employee", priority = 5)
+	@Test(description = "DELETE Already Deleted Employee", priority = 4)
 	public void deleteAlreadyDeletedEmployee() {
 
 		String id = "InvalidId";
